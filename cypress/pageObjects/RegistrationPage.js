@@ -1,5 +1,10 @@
 class RegistrationPage{
 
+    clickCreateAccount(){
+
+        return cy.get("a[class='loginLink']").click();
+    }
+
     enterFullName(fullName){
 
         //write code to make sure a firstname and lastname exists
@@ -11,24 +16,24 @@ class RegistrationPage{
         return cy.get("input[name='business_name']").type(businessName);
     }
 
-    enterCountry(country){
+    selectCountry(country){
         
-        return cy.select("select[name='country']").select(country);
+        return cy.get("select[name='country']").select(country);
     }
 
     enterPhoneNumber(phoneNumber){
         
-        return cy.get("input[name='tel']").type(phoneNumber);
+        return cy.get("input[name='phone_number']").type(phoneNumber);
     }
 
-    enterBusinessName(businessName){
+    enterBusinessEmail(businessName){
         
         return cy.get("input[name='email']").type(businessName);
     }
 
     enterPassword(password){
         
-        return cy.get("input[name='phone_number']").type(password);
+        return cy.get("input[name='password']").type(password);
     }
 
     clickRegisterBtn(){

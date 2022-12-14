@@ -5,5 +5,6 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
+    baseUrl: "https://d26py1i7xs8g2k.cloudfront.net"
   },
 });
