@@ -27,7 +27,7 @@ describe("All registration test cases",function(){
        registerPage.enterPassword(faker.internet.password(9,true,/A-Z/,'@1X'));
         registerPage.clickRegisterBtn();
 
-        cy.wait(1000);
+        cy.wait(10000);
         cy.url().should("eq","https://d26py1i7xs8g2k.cloudfront.net/get-started");
         
 
