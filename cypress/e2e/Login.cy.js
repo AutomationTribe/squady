@@ -7,12 +7,13 @@ describe("Login test cases",function(){
 
     before("all tests start",()=>{
 
-        // url =  Cypress.config.baseUrl;
-        cy.RegisterMerchant();
+        url =  "https://d26py1i7xs8g2k.cloudfront.net";
+        cy.visit(url);
+        loginPage =  new LoginPage();
 
     })
 
-    it.skip("should log user in successfully",function(){
+    it.only("should log user in successfully",function(){
 
         //let login = new LoginPage();
         loginPage.enterUsername(user.username);
