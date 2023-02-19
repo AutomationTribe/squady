@@ -28,9 +28,13 @@
 
 //Registration command
 const { faker } = require ('@faker-js/faker');
+const  Muser  = require("../fixtures/user.json");
 import MenuPage from "../pageObjects/MenuPage";
 import RegistrationPage from "../pageObjects/RegistrationPage";
-let registerPage,menuPage;
+import LoginPage from "../pageObjects/LoginPage";
+let registerPage,menuPage,loginPage,username,password;
+
+
 Cypress.Commands.add("RegisterMerchant",function(){
 
     const url =  "https://d26py1i7xs8g2k.cloudfront.net";
@@ -55,3 +59,17 @@ Cypress.Commands.add("RegisterMerchant",function(){
 
 })
 //Login Command
+Cypress.Commands.add("login",function(){
+
+    
+    cy.visit(Cypress.config().baseUrl)
+    loginPage =  new LoginPage();
+     username = Muser.username;
+     password = Muser.password;
+    // console.log(username);
+    loginPage.enterUsername(username);
+    loginPage.enterPassword(password);
+    loginPage.clickLoginBtn();
+
+
+})

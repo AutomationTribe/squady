@@ -5,5 +5,9 @@ describe("All Customer test cases",function(){
         
     })
 
+    it("should create a customer successfully",function(){
+        
+
+    })
 
 })

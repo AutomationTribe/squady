@@ -8,6 +8,7 @@ module.exports = {
     inlineAssets: true,
   },
   e2e: {
+    baseUrl : "https://d26py1i7xs8g2k.cloudfront.net",
     setupNodeEvents(on, config) {
       // implement node event listeners here
       require('cypress-mochawesome-reporter/plugin')(on);
