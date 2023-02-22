@@ -13,7 +13,7 @@ describe("All product e2e test cases",function(){
         menu.navigateToProductPage();
     })
 
-    it.only("should create a product",function(){
+    it("should create a product",function(){
         
 
         cy.wait(12000);
